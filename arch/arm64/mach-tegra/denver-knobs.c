@@ -425,7 +425,7 @@ int denver_get_pmic_config(enum denver_pmic_type *type,
 	return 0;
 }
 
-int fuse_cp_rev_check(void);
+//int fuse_cp_rev_check(void);
 static int __init denver_pmic_init(void)
 {
 	u32 voltage;
@@ -466,7 +466,7 @@ static int __init denver_pmic_init(void)
 		goto done;
 	}
 
-    if (fuse_cp_rev_check() >= 1)
+//    if (fuse_cp_rev_check() >= 1)
         voltage = 16;
 
 	err = denver_set_pmic_config(type, (u16)voltage, lock);

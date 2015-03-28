@@ -35,9 +35,10 @@ GRAPHITE_FLAGS := \
 
 SABERMOD_FLAGS := \
 	$(call cc-option,-Wno-error=maybe-uninitialized) \
-        $(call cc-option,-Wno-error=array-bounds) \
+	$(call cc-option,-Wno-error=array-bounds) \
 	$(call cc-option,-march=armv8-a) \
 	-O3 \
+	-w \
 	$(GRAPHITE_FLAGS)
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only $(SABERMOD_FLAGS)
